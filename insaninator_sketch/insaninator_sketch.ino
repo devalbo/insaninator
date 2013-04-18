@@ -54,7 +54,7 @@ boolean shouldDoTwitch() {
 
 void calculateAndSetActionDelay() {
   const unsigned long DELAY_TIME_MS_MIN = 60000;    // 1 minute
-  const unsigned long DELAY_TIME_MS_MAX = 3600000;  // 1 hour
+  const unsigned long DELAY_TIME_MS_MAX = 1800000;  // 1/2 hour
   const unsigned long WAIT_RANGE = DELAY_TIME_MS_MAX - DELAY_TIME_MS_MIN;
   unsigned long delay_time_ms = random(0, WAIT_RANGE);
 
@@ -99,7 +99,7 @@ void doMouseMotion2() {
 
 void doTwitchDelay() {
   unsigned long DELAY_TIME_MS_MIN = 50;
-  unsigned long DELAY_TIME_MS_MAX = 1500;
+  unsigned long DELAY_TIME_MS_MAX = 750;
   unsigned long delay_time_ms = random(DELAY_TIME_MS_MIN, DELAY_TIME_MS_MAX + 1);
   
 //  Serial.println("TWITCH DELAY: " + String(delay_time_ms));
